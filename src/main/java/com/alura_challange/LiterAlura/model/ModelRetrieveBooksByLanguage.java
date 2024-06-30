@@ -17,5 +17,6 @@ public class ModelRetrieveBooksByLanguage extends Model {
 
     public void retrieveBooksByLanguage(String language) {
         allBooks = bookRepository.findByLanguage(language);
+        notifyListeners();
     }
 }

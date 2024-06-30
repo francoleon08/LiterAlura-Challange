@@ -17,5 +17,6 @@ public class ModelRetrieveAllAuthorsAliveInYear extends Model {
 
     public void retrieveAllAuthorsAliveInYear(int year) {
         allAuthors = personRepository.findByDeathYearIsNullOrDeathYearGreaterThanEqual(year);
+        notifyListeners();
     }
 }

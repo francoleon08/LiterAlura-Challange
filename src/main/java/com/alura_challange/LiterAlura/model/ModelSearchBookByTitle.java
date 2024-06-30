@@ -25,7 +25,7 @@ public class ModelSearchBookByTitle extends Model {
     public void searchBookByTitle(String title) throws BookSearchException {
         try {
             lastBook = client.getBookByTitle(title);
-            eventSearchBookManager.notifyListeners();
+            notifyListeners();
         } catch (Exception e) {
             throw new BookSearchException("Error while searching book by title");
         }

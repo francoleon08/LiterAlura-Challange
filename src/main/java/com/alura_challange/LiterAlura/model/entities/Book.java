@@ -24,13 +24,11 @@ public class Book {
     private int nro_downloads;
 
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", languages=" + languages +
-                ", subjects=" + subjects +
-                ", authors=" + authors +
-                ", nro_downloads=" + nro_downloads +
-                '}';
+        return "Libro: \n" +
+                "Titulo = " + title + "\n" +
+                "Autores = " + authors + "\n" +
+                "Idiomas = " + languages + "\n" +
+                "Temas = " + subjects + "\n" +
+                "Número de descargas = " + nro_downloads + "\n";
     }
 }

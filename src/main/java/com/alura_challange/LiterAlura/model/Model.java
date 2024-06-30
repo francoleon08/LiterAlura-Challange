@@ -17,4 +17,8 @@ public abstract class Model {
     public void removeListener(ListenerModelSearchBook listener) {
         eventSearchBookManager.removeListener(listener);
     }
+
+    public void notifyListeners() {
+        eventSearchBookManager.notifyListeners();
+    }
 }

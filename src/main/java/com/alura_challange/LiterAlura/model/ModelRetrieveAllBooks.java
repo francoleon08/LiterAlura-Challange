@@ -17,5 +17,6 @@ public class ModelRetrieveAllBooks extends Model {
 
     public void retrieveAllBooks() {
         allBooks = bookRepository.findAll();
+        notifyListeners();
     }
 }

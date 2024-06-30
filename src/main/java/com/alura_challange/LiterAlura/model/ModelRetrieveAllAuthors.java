@@ -17,5 +17,6 @@ public class ModelRetrieveAllAuthors extends Model {
 
     public void retrieveAllAuthors() {
         allAuthors = personRepository.findAll();
+        notifyListeners();
     }
 }
