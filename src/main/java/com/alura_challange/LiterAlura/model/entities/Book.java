@@ -15,11 +15,11 @@ public class Book {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<String> languages;
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<String> subjects;
-    @OneToMany (cascade = CascadeType.ALL)
+    @OneToMany (cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Person> authors;
     private int nro_downloads;
 

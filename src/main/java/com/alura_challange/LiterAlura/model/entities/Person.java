@@ -4,8 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.*;
 
-import java.util.Date;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -15,7 +13,7 @@ public class Person {
     @Id
     private String name;
     private int birth_year;
-    private int death_year;
+    private Integer death_year;
 
     public String toString() {
         return name;

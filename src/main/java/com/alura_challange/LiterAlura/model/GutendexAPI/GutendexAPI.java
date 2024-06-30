@@ -8,5 +8,5 @@ import retrofit2.http.Query;
 
 public interface GutendexAPI {
     @GET("books")
-    Call<ResponseBody> getBooksByTitle(@Query("title") String title);
+    Call<ResponseBody> getBooksByTitle(@Query("search") String title);
 }

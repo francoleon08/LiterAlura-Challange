@@ -8,6 +8,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import okhttp3.ResponseBody;
+import org.springframework.stereotype.Service;
 import retrofit2.*;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -17,6 +18,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class GutendexAPIClient {
     private static final String BOOK_NOT_FOUND_MESSAGE = "Error, book not found.";
     private static final String BASE_URL = "https://gutendex.com/";

@@ -7,25 +7,19 @@ import com.alura_challange.LiterAlura.model.event.ListenerModelSearchBook;
 import com.alura_challange.LiterAlura.model.exceptions.BookSearchException;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public class ModelSearchBookByTitle {
-    private EventSearchBookManager eventSearchBookManager;
+@Service
+public class ModelSearchBookByTitle extends Model {
     @Setter
+    @Autowired
     private GutendexAPIClient client;
     @Getter
     private Book lastBook;
 
-    public ModelSearchBookByTitle(GutendexAPIClient client) {
-        this.client = client;
-        this.eventSearchBookManager = new EventSearchBookManager();
-    }
-
-    public void addListener(ListenerModelSearchBook listener) {
-        eventSearchBookManager.addListener(listener);
-    }
-
-    public void removeListener(ListenerModelSearchBook listener) {
-        eventSearchBookManager.removeListener(listener);
+    public ModelSearchBookByTitle() {
+        super();
     }
 
     public void searchBookByTitle(String title) throws BookSearchException {
