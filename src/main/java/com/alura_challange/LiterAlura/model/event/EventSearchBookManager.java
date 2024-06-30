@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EventSearchBookManager {
-    private List<ListenerModelSearchBook> listeners;
+    private final List<ListenerModelSearchBook> listeners;
 
     public EventSearchBookManager() {
         listeners = new ArrayList<>();

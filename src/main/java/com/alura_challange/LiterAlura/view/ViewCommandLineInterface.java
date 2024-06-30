@@ -2,11 +2,9 @@ package com.alura_challange.LiterAlura.view;
 
 import com.alura_challange.LiterAlura.controller.ControllerImpl;
 import com.alura_challange.LiterAlura.model.*;
-import com.alura_challange.LiterAlura.model.entities.Book;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.InputMismatchException;
 import java.util.List;

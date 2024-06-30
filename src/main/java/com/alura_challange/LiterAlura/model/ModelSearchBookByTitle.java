@@ -2,8 +2,6 @@ package com.alura_challange.LiterAlura.model;
 
 import com.alura_challange.LiterAlura.model.GutendexAPI.GutendexAPIClient;
 import com.alura_challange.LiterAlura.model.entities.Book;
-import com.alura_challange.LiterAlura.model.event.EventSearchBookManager;
-import com.alura_challange.LiterAlura.model.event.ListenerModelSearchBook;
 import com.alura_challange.LiterAlura.model.exceptions.BookSearchException;
 import lombok.Getter;
 import lombok.Setter;

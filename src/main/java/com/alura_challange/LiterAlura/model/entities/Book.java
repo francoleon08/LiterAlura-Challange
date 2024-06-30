@@ -8,18 +8,19 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 public class Book {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> languages;
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> subjects;
-    @OneToMany (cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Person> authors;
     private int nro_downloads;
 
